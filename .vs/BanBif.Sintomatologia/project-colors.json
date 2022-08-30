@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "42b8748e-cfc4-4aed-8947-8ae991193afe": {
+      "ProjectGuid": "42b8748e-cfc4-4aed-8947-8ae991193afe",
+      "DisplayName": "BanBif.Sintomatologia.DA",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    },
+    "0cb2eca1-9abd-4451-98e2-d97f60ae2d35": {
+      "ProjectGuid": "0cb2eca1-9abd-4451-98e2-d97f60ae2d35",
+      "DisplayName": "BanBif.Sintomatologia.Web",
+      "ColorIndex": 1
+    },
+    "951fa3be-cad4-4192-81e9-d572f1038bf9": {
+      "ProjectGuid": "951fa3be-cad4-4192-81e9-d572f1038bf9",
+      "DisplayName": "BanBif.Sintomatologia.Api",
+      "ColorIndex": 2
+    },
+    "ee4b779a-a273-403b-ac67-0270c75df6c9": {
+      "ProjectGuid": "ee4b779a-a273-403b-ac67-0270c75df6c9",
+      "DisplayName": "BanBif.Sintomatologia.BE",
+      "ColorIndex": 3
+    },
+    "1e082757-bc7e-4fa8-af51-65bafe81e5ab": {
+      "ProjectGuid": "1e082757-bc7e-4fa8-af51-65bafe81e5ab",
+      "DisplayName": "BanBif.Sintomatologia.BL",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

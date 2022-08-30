@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanBif.Sintomatologia.Web", "BanBif.Sintomatologia.Web\BanBif.Sintomatologia.Web.csproj", "{0CB2ECA1-9ABD-4451-98E2-D97F60AE2D35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanBif.Sintomatologia.Api", "BanBif.Sintomatologia.Api\BanBif.Sintomatologia.Api.csproj", "{951FA3BE-CAD4-4192-81E9-D572F1038BF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanBif.Sintomatologia.DA", "BanBif.Sintomatologia.DA\BanBif.Sintomatologia.DA.csproj", "{42B8748E-CFC4-4AED-8947-8AE991193AFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanBif.Sintomatologia.BE", "BanBif.Sintomatologia.BE\BanBif.Sintomatologia.BE.csproj", "{EE4B779A-A273-403B-AC67-0270C75DF6C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanBif.Sintomatologia.BL", "BanBif.Sintomatologia.BL\BanBif.Sintomatologia.BL.csproj", "{1E082757-BC7E-4FA8-AF51-65BAFE81E5AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanBif.Sintomatologia.RepService", "BanBif.Sintomatologia.RepService\BanBif.Sintomatologia.RepService.csproj", "{D81F4B3B-B79A-40E3-882C-E6D8503E7D08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CB2ECA1-9ABD-4451-98E2-D97F60AE2D35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CB2ECA1-9ABD-4451-98E2-D97F60AE2D35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CB2ECA1-9ABD-4451-98E2-D97F60AE2D35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CB2ECA1-9ABD-4451-98E2-D97F60AE2D35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{951FA3BE-CAD4-4192-81E9-D572F1038BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{951FA3BE-CAD4-4192-81E9-D572F1038BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{951FA3BE-CAD4-4192-81E9-D572F1038BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{951FA3BE-CAD4-4192-81E9-D572F1038BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42B8748E-CFC4-4AED-8947-8AE991193AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42B8748E-CFC4-4AED-8947-8AE991193AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42B8748E-CFC4-4AED-8947-8AE991193AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42B8748E-CFC4-4AED-8947-8AE991193AFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE4B779A-A273-403B-AC67-0270C75DF6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4B779A-A273-403B-AC67-0270C75DF6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4B779A-A273-403B-AC67-0270C75DF6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4B779A-A273-403B-AC67-0270C75DF6C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E082757-BC7E-4FA8-AF51-65BAFE81E5AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E082757-BC7E-4FA8-AF51-65BAFE81E5AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E082757-BC7E-4FA8-AF51-65BAFE81E5AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E082757-BC7E-4FA8-AF51-65BAFE81E5AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D81F4B3B-B79A-40E3-882C-E6D8503E7D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D81F4B3B-B79A-40E3-882C-E6D8503E7D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D81F4B3B-B79A-40E3-882C-E6D8503E7D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D81F4B3B-B79A-40E3-882C-E6D8503E7D08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CBE8FC5-C152-4467-A79C-7B64D5EAEC83}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/banbif
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BanBif.Sintomatologia.Web\\BanBif.Sintomatologia.Web.csproj
+		SccProjectName1 = BanBif.Sintomatologia.Web
+		SccLocalPath1 = BanBif.Sintomatologia.Web
+		SccProjectUniqueName2 = BanBif.Sintomatologia.Api\\BanBif.Sintomatologia.Api.csproj
+		SccProjectName2 = BanBif.Sintomatologia.Api
+		SccLocalPath2 = BanBif.Sintomatologia.Api
+		SccProjectUniqueName3 = BanBif.Sintomatologia.DA\\BanBif.Sintomatologia.DA.csproj
+		SccProjectName3 = BanBif.Sintomatologia.DA
+		SccLocalPath3 = BanBif.Sintomatologia.DA
+		SccProjectUniqueName4 = BanBif.Sintomatologia.BE\\BanBif.Sintomatologia.BE.csproj
+		SccProjectName4 = BanBif.Sintomatologia.BE
+		SccLocalPath4 = BanBif.Sintomatologia.BE
+		SccProjectUniqueName5 = BanBif.Sintomatologia.BL\\BanBif.Sintomatologia.BL.csproj
+		SccProjectName5 = BanBif.Sintomatologia.BL
+		SccLocalPath5 = BanBif.Sintomatologia.BL
+		SccProjectUniqueName6 = BanBif.Sintomatologia.RepService\\BanBif.Sintomatologia.RepService.csproj
+		SccProjectName6 = BanBif.Sintomatologia.RepService
+		SccLocalPath6 = BanBif.Sintomatologia.RepService
+	EndGlobalSection
+EndGlobal

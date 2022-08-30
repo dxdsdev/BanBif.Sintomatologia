@@ -1,0 +1,5 @@
+C:\Users\DRomero\Source\Workspaces\BanBif.Sintomatologia\BanBif.Sintomatologia\BanBif.Sintomatologia.BE\bin\Debug\BanBif.Sintomatologia.BE.dll
+C:\Users\DRomero\Source\Workspaces\BanBif.Sintomatologia\BanBif.Sintomatologia\BanBif.Sintomatologia.BE\bin\Debug\BanBif.Sintomatologia.BE.pdb
+C:\Users\DRomero\Source\Workspaces\BanBif.Sintomatologia\BanBif.Sintomatologia\BanBif.Sintomatologia.BE\obj\Debug\BanBif.Sintomatologia.BE.csproj.CoreCompileInputs.cache
+C:\Users\DRomero\Source\Workspaces\BanBif.Sintomatologia\BanBif.Sintomatologia\BanBif.Sintomatologia.BE\obj\Debug\BanBif.Sintomatologia.BE.dll
+C:\Users\DRomero\Source\Workspaces\BanBif.Sintomatologia\BanBif.Sintomatologia\BanBif.Sintomatologia.BE\obj\Debug\BanBif.Sintomatologia.BE.pdb

@@ -1,0 +1,307 @@
+﻿@{
+    Layout = null;
+}
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BanBif | Formulario de prevención - COVID19</title>
+
+    <link href="~/Assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="~/Assets/css/animate.css" rel="stylesheet">
+    <link href="~/Assets/css/style.css" rel="stylesheet">
+
+    <style type="text/css">
+        .titulo1 {
+            font-size: 30px;
+            line-height: 0.5;
+        }
+
+        .titulo2 {
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 22px !important;
+        }
+
+        .menu {
+            position: sticky;
+            top: -98px;
+            z-index: 100;
+        }
+
+        input:focus:invalid {
+            border-color: salmon;
+        }
+
+        input:focus:valid {
+            border-color: lime;
+        }
+
+
+        #regiration_form fieldset:not(:first-of-type) {
+            display: none;
+        }
+
+
+        /* Tooltip */
+        .tooltip {
+            text-align: left !important;
+        }
+
+        .tooltip-inner {
+            text-align: left !important;
+            padding: 15px !important;
+            max-width: 300px !important;
+        }
+
+        .tooltip .tooltip-inner {
+            text-align: justify !important;
+            background-color: #20A3FF !important;
+        }
+
+        .tooltip.top .arrow {
+            border-top-color: #20A3FF !important;
+        }
+
+        .bs-tooltip-top .arrow::before {
+            top: 0;
+            border-width: .4rem .4rem 0;
+            border-top-color: #20A3FF !important;
+        }
+
+        .bs-tooltip-bottom .arrow::before {
+            bottom: 0;
+            border-width: 0 .4rem .4rem;
+            border-bottom-color: #20A3FF !important;
+        }
+
+        .tooltip.top .tooltip-arrow {
+            border-top-color: #20A3FF !important;
+        }
+
+        .tooltip.right .tooltip-arrow {
+            border-right-color: #20A3FF !important;
+        }
+
+        .tooltip.bottom .tooltip-arrow {
+            border-bottom-color: #20A3FF !important;
+        }
+
+        .tooltip.left .tooltip-arrow {
+            border-left-color: #20A3FF !important;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="top-navigation gray-bg">
+    <div class="wrapper white-bg" style="border-bottom-color:#20A3FF; border-bottom-style:solid; border-bottom-width:2px">
+        <div class="container">
+            <div class="row white-bg">
+                <div class="col-lg-12 no-padding no-margin">
+                    <a href="index.php" class="navbar-brand bg-white">
+                        <img src="~/Assets/img/banbif.png" height="25">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper" style="padding-left: 0px;padding-right: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row menu">
+                        <div class="col-lg-12">
+                            <div class="widget style1 green-bg p-md" style="padding-bottom:3px; margin-bottom:0px">
+                                <div class="row	">
+                                    <div class="col-lg-12 text-center">
+                                        <span class="titulo1" style="font-weight:500">Ficha de Sintomatología Virtual</span>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <div align="center">
+                                            <div id="nombre"></div>
+                                           <br />
+                                            <span style="font-size:20px;" id="spResultado">
+                                                La encuesta se ha guardado satisfactoriamente
+                                            </span>
+                                            <br />
+                                            <span style="font-size:20px;" id="spResultado">
+                                                Fecha: <label id="lblFecha"></label>
+                                            </span>
+                                            <br />
+                                            <span style="font-size:20px;" id="spResultado">
+                                                Hora: <label id="lblHora"></label>
+                                            </span>
+                                            <br />
+                                            <br />
+                                            <div id="divMensaje"></div>
+                                        </div>
+                                        <br />
+                                        <br />
+                                        <div align="center">
+                                            <input type="button" style="background-color:lightblue;" id="btnRefrescar" value="Salir" class="btn btn-next" onclick="Finalizar()" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <!-- Lateral derecho-->
+                <div class="col-lg-3">
+                    <div class="" style="background-color:#0FFFF0; position: relative !important">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper mt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer">
+                    <div class="float-right">
+                    </div>
+                    <div>
+                        <strong>Innovación</strong> BanBif &copy; 2021
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Mainly scripts -->
+    <script src="~/Assets/js/jquery-3.1.1.min.js"></script>
+    <script src="~/Assets/js/popper.min.js"></script>
+    <script src="~/Assets/js/bootstrap.js"></script>
+    <script src="~/Assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/Assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="~/Assets/js/inspinia.js"></script>
+    <script src="~/Assets/js/plugins/pace/pace.min.js"></script>
+    <script src="~/Assets/js/jquery.blockUI.js"></script>
+    <!-- Flot -->
+    <script src="~/Assets/js/plugins/flot/jquery.flot.js"></script>
+    <script src="~/Assets/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="~/Assets/js/plugins/flot/jquery.flot.resize.js"></script>
+
+    <!-- ChartJS-->
+    <script src="~/Assets/js/plugins/chartJs/Chart.min.js"></script>
+
+    <!-- Peity -->
+    <script src="~/Assets/js/plugins/peity/jquery.peity.min.js"></script>
+    <!-- Peity demo -->
+    <script src="~/Assets/js/demo/peity-demo.js"></script>
+    <script src="~/Assets/js/Validaciones.js"></script>
+
+   
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+    var dialog;
+
+    $(document).ready(function () {
+
+        sessionStorage.setItem("URL", "@ViewBag.URL");
+
+        $('#lblFecha').text("@ViewBag.Dia");
+        $('#lblHora').text("@ViewBag.Hora");
+
+        var nombreCliente = sessionStorage.NombreColaborador;
+        nombreCliente = '<b style="font-size:20px">Hola, <span>' + nombreCliente +'</span></b>';
+        $('#nombre').html(nombreCliente);
+
+
+        var mensaje = sessionStorage.Mensaje;
+
+        mensaje = '<span ><b>' + mensaje + '</b></span>';
+        $('#divMensaje').html(mensaje);
+
+        sessionStorage.setItem("Dia", "@ViewBag.Dia");
+         sessionStorage.setItem("Hora", "@ViewBag.Hora");
+
+        //var Cliente = {};
+        //Cliente.CodigoAuto = sessionStorage.CodigoAuto;
+
+        //$.ajax({
+        //    url: sessionStorage.URL + '/Gracias/ObtenerNombre',
+        //    type: "POST",
+        //    dataType: "json",
+        //    contentType: "application/json; charset=utf-8",
+        //    processData: true,
+        //    data: JSON.stringify(Cliente),
+        //    success: function (response) {
+        //        console.log(response);
+        //        if (response.Result) {
+        //            $("#spNombre").text(sessionStorage.NOMBRES);
+        //        } else {
+        //            alertify.error(response.Mensaje);
+        //        }
+        //        $.unblockUI();
+        //    },
+
+        //    failure: function (msg) {
+        //        console.log(msg);
+        //        $.unblockUI();
+        //    },
+
+        //    error: function (xhr, status, error) {
+        //        console.log(error);
+        //        $.unblockUI();
+        //    },
+
+        //    complete: function () {
+        //        //$.unblockUI();
+        //        //$("#prueba").dialog("close")
+        //    }
+        //});
+
+    });
+
+
+     function Finalizar() {
+            window.location.href = sessionStorage.URL + "/Login";
+        }
+
+</script>

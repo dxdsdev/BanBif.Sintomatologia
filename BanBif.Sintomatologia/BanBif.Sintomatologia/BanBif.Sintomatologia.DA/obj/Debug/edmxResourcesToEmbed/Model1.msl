@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="panelModelStoreContainer" CdmEntityContainer="panelEntities">
+    <FunctionImportMapping FunctionImportName="USP_REPORTESINTO" FunctionName="panelModel.Store.USP_REPORTESINTO" />
+    <FunctionImportMapping FunctionImportName="SP_PROCESAR_SINTOMATOLOGIA" FunctionName="panelModel.Store.SP_PROCESAR_SINTOMATOLOGIA" />
+    <EntitySetMapping Name="tbl_aSINTO_GRUPOPREGUNTA">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSINTO_GRUPOPREGUNTA">
+        <MappingFragment StoreEntitySet="tbl_aSINTO_GRUPOPREGUNTA">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CODIGOFORMULARIO" ColumnName="CODIGOFORMULARIO" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="FLAGSINO" ColumnName="FLAGSINO" />
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="CODIGOGRUPO" ColumnName="CODIGOGRUPO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSINTO_OPCIONES">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSINTO_OPCIONES">
+        <MappingFragment StoreEntitySet="tbl_aSINTO_OPCIONES">
+          <ScalarProperty Name="CODIGOPREGUNTA_MOSTRAR" ColumnName="CODIGOPREGUNTA_MOSTRAR" />
+          <ScalarProperty Name="FLAGOTRO" ColumnName="FLAGOTRO" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="CODIGOPREGUNTA" ColumnName="CODIGOPREGUNTA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="OPCION" ColumnName="OPCION" />
+          <ScalarProperty Name="CODIGOOPCION" ColumnName="CODIGOOPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSINTO_PREGUNTA">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSINTO_PREGUNTA">
+        <MappingFragment StoreEntitySet="tbl_aSINTO_PREGUNTA">
+          <ScalarProperty Name="TEXTO_AYUDA" ColumnName="TEXTO_AYUDA" />
+          <ScalarProperty Name="DEPENDIENTE" ColumnName="DEPENDIENTE" />
+          <ScalarProperty Name="OBLIGATORIO" ColumnName="OBLIGATORIO" />
+          <ScalarProperty Name="ORDEN" ColumnName="ORDEN" />
+          <ScalarProperty Name="CODIGOTIPOPREGUNTA" ColumnName="CODIGOTIPOPREGUNTA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CODIGOGRUPO" ColumnName="CODIGOGRUPO" />
+          <ScalarProperty Name="PREGUNTA" ColumnName="PREGUNTA" />
+          <ScalarProperty Name="CODIGOPREGUNTA" ColumnName="CODIGOPREGUNTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSINTO_RESPUESTA">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSINTO_RESPUESTA">
+        <MappingFragment StoreEntitySet="tbl_aSINTO_RESPUESTA">
+          <ScalarProperty Name="OPCION2" ColumnName="OPCION2" />
+          <ScalarProperty Name="OPCION" ColumnName="OPCION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="TEXTO_OTRO" ColumnName="TEXTO_OTRO" />
+          <ScalarProperty Name="CODIGOPREGUNTA" ColumnName="CODIGOPREGUNTA" />
+          <ScalarProperty Name="CODIGOGRUPO" ColumnName="CODIGOGRUPO" />
+          <ScalarProperty Name="CODREGISTRO" ColumnName="CODREGISTRO" />
+          <ScalarProperty Name="CODGIORESPUESTA" ColumnName="CODGIORESPUESTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSINTO_TIPOPREGUNTA">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSINTO_TIPOPREGUNTA">
+        <MappingFragment StoreEntitySet="tbl_aSINTO_TIPOPREGUNTA">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CODIGOTIPOPREGUNTA" ColumnName="CODIGOTIPOPREGUNTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_mSINTO_COLABORADOR">
+      <EntityTypeMapping TypeName="panelModel.tbl_mSINTO_COLABORADOR">
+        <MappingFragment StoreEntitySet="tbl_mSINTO_COLABORADOR">
+          <ScalarProperty Name="ANEXO" ColumnName="ANEXO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="ESCOLABORADOR" ColumnName="ESCOLABORADOR" />
+          <ScalarProperty Name="USUARIOWINDOWS" ColumnName="USUARIOWINDOWS" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="PUESTO" ColumnName="PUESTO" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+          <ScalarProperty Name="NOMBRESAPELLIDOS" ColumnName="NOMBRESAPELLIDOS" />
+          <ScalarProperty Name="CODCOLABORADOR" ColumnName="CODCOLABORADOR" />
+          <ScalarProperty Name="CODAUTOGENERADO" ColumnName="CODAUTOGENERADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_mSINTO_FORMULARIO">
+      <EntityTypeMapping TypeName="panelModel.tbl_mSINTO_FORMULARIO">
+        <MappingFragment StoreEntitySet="tbl_mSINTO_FORMULARIO">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="TERMINOSCONDICIONES" ColumnName="TERMINOSCONDICIONES" />
+          <ScalarProperty Name="DESCRIPCIONSUBTITULO" ColumnName="DESCRIPCIONSUBTITULO" />
+          <ScalarProperty Name="SUBTITULO" ColumnName="SUBTITULO" />
+          <ScalarProperty Name="DESCRIPCIONTITULO" ColumnName="DESCRIPCIONTITULO" />
+          <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+          <ScalarProperty Name="CODIGOFORMULARIO" ColumnName="CODIGOFORMULARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSINTO_PROCESO">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSINTO_PROCESO">
+        <MappingFragment StoreEntitySet="tbl_aSINTO_PROCESO">
+          <ScalarProperty Name="PROCESADO" ColumnName="PROCESADO" />
+          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+          <ScalarProperty Name="CODIGOREGISTRO" ColumnName="CODIGOREGISTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSINTO_MENSAJES">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSINTO_MENSAJES">
+        <MappingFragment StoreEntitySet="tbl_aSINTO_MENSAJES">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="MENSAJEHTML" ColumnName="MENSAJEHTML" />
+          <ScalarProperty Name="MENSAJE" ColumnName="MENSAJE" />
+          <ScalarProperty Name="CODIGOMENSAJE" ColumnName="CODIGOMENSAJE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_aSINTO_REGISTRO">
+      <EntityTypeMapping TypeName="panelModel.tbl_aSINTO_REGISTRO">
+        <MappingFragment StoreEntitySet="tbl_aSINTO_REGISTRO">
+          <ScalarProperty Name="CODIGOMENSAJE" ColumnName="CODIGOMENSAJE" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="PROCESADO" ColumnName="PROCESADO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="ESCOLABORADOR" ColumnName="ESCOLABORADOR" />
+          <ScalarProperty Name="FECHAREGISTRO" ColumnName="FECHAREGISTRO" />
+          <ScalarProperty Name="CHECKTERMINOS" ColumnName="CHECKTERMINOS" />
+          <ScalarProperty Name="ANEXO" ColumnName="ANEXO" />
+          <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="PUESTO" ColumnName="PUESTO" />
+          <ScalarProperty Name="CODIGOFORMULARIO" ColumnName="CODIGOFORMULARIO" />
+          <ScalarProperty Name="CODAUTOGENERADO" ColumnName="CODAUTOGENERADO" />
+          <ScalarProperty Name="CODREGISTRO" ColumnName="CODREGISTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

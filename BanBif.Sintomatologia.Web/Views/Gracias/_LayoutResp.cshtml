@@ -1,0 +1,215 @@
+﻿<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Préstamo Vehicular | BanBif</title>
+
+   
+    <!-- CSS -->
+    @*<link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-theme.min.css">*@
+    <link rel="stylesheet" href="~/Librerias/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Librerias/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Librerias/css/form-elements.css">
+    <link rel="stylesheet" href="~/Librerias/css/style.css">
+    <link rel="stylesheet" href="~/Librerias/fonts/fonts.css">
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
+
+    @*<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-theme.min.css">*@
+    <link rel="stylesheet" href="~/Librerias/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Librerias/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Librerias/css/form-elements.css">
+    <link rel="stylesheet" href="~/Librerias/css/style.css">
+    <link rel="stylesheet" href="~/Librerias/fonts/fonts.css">
+
+
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="~/Librerias/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/ico/favicon.ico">
+
+    <!-- include our jquery scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    @*<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>*@
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="~/Librerias/fonts/fonts.css"></script>
+    <script src="~/Librerias/js/Validaciones.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#formfloat input').focusout(function () {
+                var text_value = $(this).val();
+
+                if (text_value === "") {
+                    $(this).removeClass('float-label');
+                } else {
+                    $(this).addClass('float-label');
+                }
+            });
+
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <section class="right">
+        <div class="form-box text-left">
+            <a class="logo" href="https://www.banbif.com.pe" target="a_blank"><img src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/img/backgrounds/banbif_cyan.png" alt="Logo BanBif"></a>
+
+            <section id="form-steps" class="centrado dospasos">
+                @RenderBody()
+            </section>
+
+        </div>
+    </section>
+    <section class="left">
+        <div class="content-text">
+            <img class="hola" src="https://www.banbif.com.pe/Portals/0/Images/Personas/Prestamos%20Personales/Prestamo%20Hipotecario/FIP/img_HOLA.png" style="margin-bottom: 15px;" alt="Hola">
+            <br>
+            <h1 class="fadeInUp"><strong style="font-weight: 700;">PRESTAMOS PARA MAESTRIAS</strong></h1>
+
+            <img class="ptos" src="https://www.banbif.com.pe/Portals/0/Images/Personas/Prestamos%20Personales/Prestamo%20Hipotecario/FIP/img_puntos.png" alt="puntos">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 posicion" style="padding: 0;">
+                <div class="grafica-text col-xs-12 col-sm-6 col-md-6 col-lg-6 sinpd">
+                    <div id="bg-white" class="col-md-12 sinpd subtitulo">
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 sinpd list-ben">
+                            <div class="icon-left"><img src="~/Librerias/img/icon1.png" alt="icono web"></div>
+                            <p class="subt" style="margin-top:20px">
+                                <strong>Podrás recibir</strong>
+                                <br>tu carta de aprobación en 5 minutos.
+                            </p>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="col-md-12 col-sm-12 col-xs-12 sinpd list-ben">
+                            <div class="icon-left"><img src="~/Librerias/img/icon2.png" alt="icono web"></div>
+                            <p class="subt" style="margin-top:20px">
+                                <strong>Hasta el 100%</strong>
+                                <br>de financiamiento.
+                            </p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 sinpd list-ben">
+                            <div class="icon-left"><img src="~/Librerias/img/icon3.png" alt="icono web"></div>
+                            <p class="subt" style="margin-top:20px">
+                                <strong>Financia</strong>
+                                <br>hasta en 72 cuotas.
+                            </p>
+                        </div>
+
+                        @*<div class="col-md-12 col-sm-12 col-xs-12 sinpd list-ben">
+                                <div class="icon-left"><img src="~/assets/img/icon4.png" alt="icono web"></div>
+                                <p class="subt" style="margin-top:20px">
+                                    <strong>Hasta 90 días</strong>
+                                    <br>de gracia para el pago de la primera cuota.
+                                </p>
+                            </div>*@
+
+                        @*<div class="col-md-12 col-sm-12 col-xs-12 sinpd list-ben">
+                                <div class="icon-left"></div>
+                                <p class="subt" style="margin-top:20px">
+                                    <strong>Mayor información</strong>
+                                    <br>
+                                    <a href="https://www.banbif.com.pe/Personas/Prestamos-Personales/Prestamo-Vehicular" class="f1-buttons" target="_blank" style="text-align:center">
+                                        <img src="~/assets/img/iconos/bt-2.png" style="width:110px; height:60px; background-color:white" />
+                                    </a>
+                                </p>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="grafica col-xs-12 col-sm-6 col-md-6 col-lg-6 sinpd posicion-img" style="margin:0 auto;">
+                    <img class="graf" src="~/Librerias/img/chico-999x792.png" alt="imagen prestamo vehicular">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="left">
+        <div class="content-text">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 0;">
+                <div class="legal-bottom col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                 
+                   
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                        <p>
+                            
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Javascript -->
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/jquery-1.11.1.min.js"></script>
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/bootstrap/js/bootstrap.min.js"></script>
+    <!--Scripts para fondo de pantalla
+    <script src="assets/js/jquery.backstretch.min.js"></script>-->
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/retina-1.1.0.min.js"></script>
+    <script src="https://www.banbif.com.pe/Portals/0/Landing%20Registro/nvo/formulario/assets/js/scripts.js"></script>
+    @*<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>*@
+    <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
+    <![endif]-->
+
+    <script>
+
+
+        function soloLetras(e) {
+            key = e.keyCode || e.which;
+            tecla = String.fromCharCode(key).toLowerCase();
+            letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+            especiales = "8-37-39-46";
+
+            tecla_especial = false
+            for (var i in especiales) {
+                if (key == especiales[i]) {
+                    tecla_especial = true;
+                    break;
+                }
+            }
+
+            if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+                return false;
+            }
+        }
+        function soloNumeros(e) {
+            key = e.keyCode || e.which;
+            tecla = String.fromCharCode(key).toLowerCase();
+            letras = "0123456789";
+            especiales = "8-37-39-46";
+
+            tecla_especial = false
+            for (var i in especiales) {
+                if (key == especiales[i]) {
+                    tecla_especial = true;
+                    break;
+                }
+            }
+
+            if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+                return false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

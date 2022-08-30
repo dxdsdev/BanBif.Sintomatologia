@@ -1,0 +1,2721 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BanBif | Formulario de prevención - COVID19</title>
+
+    <link href="~/Assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="~/Assets/css/animate.css" rel="stylesheet">
+    <link href="~/Assets/css/style.css" rel="stylesheet">
+    <script src="~/Library/js/Validaciones.js"></script>
+
+    <style type="text/css">
+        .titulo1 {
+            font-size: 30px;
+            line-height: 0.5;
+        }
+
+        .titulo2 {
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 22px !important;
+        }
+
+        .menu {
+            /*position: sticky;*/
+            top: -98px;
+            z-index: 100;
+        }
+
+        input:focus:invalid {
+            border-color: salmon;
+        }
+
+        input:focus:valid {
+            border-color: lime;
+        }
+
+
+        #regiration_form fieldset:not(:first-of-type) {
+            display: none;
+        }
+
+
+        /* Tooltip */
+        .tooltip {
+            text-align: left !important;
+        }
+
+        .tooltip-inner {
+            text-align: left !important;
+            padding: 15px !important;
+            max-width: 300px !important;
+        }
+
+        .tooltip .tooltip-inner {
+            text-align: justify !important;
+            background-color: #20A3FF !important;
+        }
+
+        .tooltip.top .arrow {
+            border-top-color: #20A3FF !important;
+        }
+
+        .bs-tooltip-top .arrow::before {
+            top: 0;
+            border-width: .4rem .4rem 0;
+            border-top-color: #20A3FF !important;
+        }
+
+        .bs-tooltip-bottom .arrow::before {
+            bottom: 0;
+            border-width: 0 .4rem .4rem;
+            border-bottom-color: #20A3FF !important;
+        }
+
+        .tooltip.top .tooltip-arrow {
+            border-top-color: #20A3FF !important;
+        }
+
+        .tooltip.right .tooltip-arrow {
+            border-right-color: #20A3FF !important;
+        }
+
+        .tooltip.bottom .tooltip-arrow {
+            border-bottom-color: #20A3FF !important;
+        }
+
+        .tooltip.left .tooltip-arrow {
+            border-left-color: #20A3FF !important;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="top-navigation gray-bg">
+    <div class="wrapper white-bg" style="border-bottom-color:#20A3FF; border-bottom-style:solid; border-bottom-width:2px">
+        <div class="container">
+            <div class="row white-bg">
+                <div class="col-lg-12 no-padding no-margin">
+                    <a href="index.php" class="navbar-brand bg-white">
+                        <img src="~/Assets/img/banbif.png" height="25">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper" style="padding-left: 0px;padding-right: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row menu">
+                        <div class="col-lg-12">
+                            <div class=" style1 blue-bg p-md" style="padding-bottom:3px; margin-bottom:0px">
+                                <div class="row	">
+                                    <div class="col-lg-12 text-center">
+                                        <span class="titulo1" style="font-weight:500">Declaración Jurada Virtual de sintomatología</span>
+                                        <br><br />
+                                        <span>
+                                            La siguiente ficha permitirá un mejor monitoreo de tu estado de salud actual.
+                                            De tener alguna consulta al respecto, por favor no dudes en ponerte en contacto con SST.
+                                        </span>
+
+
+                                    </div>
+                                </div>
+                                @*<div class="row">
+                                        <div class="col-lg-12 mt-3">
+                                            La siguiente ficha permitirá un mejor monitoreo de tu estado de salud actual.
+                                            De tener alguna consulta al respecto, por favor no dudes en ponerte en contacto con SST.
+                                        </div>
+                                    </div>*@
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row mt-2">
+                        <div class="col-lg-12">
+                            <div class="widget style1 white-bg p-xl">
+                                <div class="row mt-5">
+                                    <div class="col-lg-12">
+                                        <h2><i class="fa fa-edit text-success"></i> HOLA 👋</h2>
+                                        <div class="row">
+                                            <div class="col-lg-12 mt-3">
+                                                El objetivo de esta evaluación virtual es conocer posibles síntomas que pueda presentar,
+                                                por ello es importante su compromiso a responder con la verdad.
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <b><span class="titulo2" style="color:red!important">*Obligatorio</span></b>
+                                        <hr style="border-color:#20A3FF">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+
+                    <div class="row mt-2">
+                        <div class="col-lg-12">
+                            <div class="widget style1 white-bg p-xl" style="margin-top:3px">
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h2><i class="fa fa-id-card  text-success"></i> SECCIÓN 1: INGRESO DE DATOS</h2>
+                                        <hr style="border-color:#20A3FF">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-8 mt-3">
+                                        <b><span class="titulo2">Nombres y Apellidos</span><span class="titulo2" style="color:red!important">*</span></b>
+                                    </div>
+                                    <div class="col-lg-8 mt-3">
+                                        <span class="titulo2">Colocar tus nombres y apellidos completos (en ese orden)</span>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-8 mt-3">
+                                        <input id="txtApellidosNombres" name="txtApellidosNombres" type="text" onkeypress="return soloLetras(event)" class="form-control form-control-2" placeholder="Tu respuesta" required>
+                                        <div id="ApellidosNombres-feedback" class="invalid-feedback">
+                                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Esta pregunta es obligatoria
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div class="row">
+                                    <div class="col-lg-8 mt-3">
+                                        <b><span class="titulo2">Documento </span><span class="titulo2" style="color:red!important">*</span></b>
+                                    </div>
+                                    <div class="col-lg-8 mt-3">
+                                        <span class="titulo2">Ingrese tu número de DNI o CE</span>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-8 mt-3">
+                                        <input id="txtDocumento" name="txtDocumento" type="text" onkeypress="return soloNumeros(event)" maxlength="8" class="form-control form-control-2" placeholder="Tu respuesta" required>
+                                        <div id="Cargo-feedback" class="invalid-feedback">
+                                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Esta pregunta es obligatoria
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-lg-8 mt-3">
+                                        <b><span class="titulo2">Número de Celular Personal o Laboral</span><span class="titulo2" style="color:red!important">*</span></b>
+                                    </div>
+                                    <div class="col-lg-8 mt-3">
+                                        <span class="titulo2">Ingrese tu número de celular</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-8 mt-3">
+                                        <input id="txtCelular" name="txtCelular" type="text" class="form-control form-control-2" onkeypress="return soloNumeros(event)" placeholder="Tu respuesta" required>
+                                        <div id="Empresa-feedback" class="invalid-feedback">
+                                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Esta pregunta es obligatoria
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                @*Modificacion pendiente de Eliminacion*@
+
+                                @*<div class="row">
+                                        <div class="col-lg-8 mt-3">
+                                            <b><span class="titulo2">Indicar el número de anexo </span></b>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-8 mt-3">
+                                            <input id="txtAnexo" name="txtAnexo" type="text" onkeypress="return soloNumeros(event)" class="form-control form-control-2" placeholder="Tu respuesta">
+                                        </div>
+                                    </div>
+                                    <hr />*@
+
+
+                                @*Modificacion pendiente de Eliminacion*@
+
+                                @*<div class="row">
+                                        <div class="col-lg-8 mt-3">
+                                            <b><span class="titulo2">¿Te has vacunado contra el COVID-19? </span></b>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-8 mt-3">
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="radio" name="rbVacunado" id="rbVacunadoSi" value="1"> Si, las dosis completas
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbVacunado" id="rbVacunadoSi1" value="2"> Si, las dosis completas y refuerzo
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbVacunado" id="rbVacunadoSi2" value="3"> Si, pendiente una dosis
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbVacunado" id="rbVacunadoNo" value="4"> No
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr />*@
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- #region  pendiente de  Eliminacion -->
+                    @*Modificacion pendiente de  Eliminacion*@
+
+                    @*<div class="row mt-2">
+                            <div class="col-lg-12">
+                                <div class="widget style1 white-bg p-xl" style="margin-top:3px">
+
+                                    <div class="row mt-5">
+                                        <div class="col-lg-12">
+                                            <h2 style="line-height:1"><i class="fa fa-edit text-success"></i> SECCIÓN 2: TIPO DE TRABAJO</h2>
+                                            <hr style="border-color:#20A3FF">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12">
+                                            <span class="titulo2"><b>Elige el tipo de trabajo que estás haciendo</b> </span><span class="titulo2" style="color:red!important"> *</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 mt-3">
+
+                                            <input type="radio" name="rbTrabaj" id="rbTrabajP" value="1"> Trabajo Presencial
+                                            <img src="" />
+                                            <br /> <br />
+                                            <input type="radio" name="rbTrabaj" id="rbTrabajR" value="2"> Trabajo Remoto
+                                            <img src="" />
+                                            <br /> <br />
+                                            <input type="radio" name="rbTrabaj" id="rbTrabajM" value="3"> Trabajo Mixto
+                                            <img src="" />
+                                            <br /> <br />
+
+                                        </div>
+                                    </div>
+                                    <hr />
+                                </div>
+                            </div>
+                        </div>*@
+
+
+                    <!-- #endregion -->
+
+                    <div class="row mt-2">
+                        <div class="col-lg-12">
+                            <div class="widget style1 white-bg p-xl" style="margin-top:3px">
+
+                                <div class="row mt-5">
+                                    <div class="col-lg-12">
+                                        <h2 style="line-height:1"><i class="fa fa-edit text-success"></i> SECCIÓN 2: OFICINAS</h2>
+                                        <hr style="border-color:#20A3FF">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-lg-12">
+                                        <span class="titulo2"><b>Elige donde estás laborando </b> </span><span class="titulo2" style="color:red!important"> *</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+
+                                        <input type="radio" name="rbOfificinas" id="rbOficinaPrincipal" value="1"> Oficina Principal
+                                        <img src="" />
+                                        <br /> <br />
+                                        <input type="radio" name="rbOfificinas" id="rbOficinaLima" value="2"> Oficina en Lima
+                                        <img src="" />
+                                        <br /> <br />
+                                        <input type="radio" name="rbOfificinas" id="rbOficinaProvincia" value="3"> Oficina en Provincia
+                                        <img src="" />
+                                        <br /> <br />
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div class="row mt-5" id="oficinaLima" style="display:none">
+                                    <div class="col-lg-12">
+                                        <h2 style="line-height:1"> OFICINA DE LIMA</h2>
+                                        <br />
+                                        <hr style="border-color:#20A3FF">
+
+                                        <div class="col-lg-12">
+                                            <b><span class="titulo2">Elige tu oficina: </span><span class="titulo2" style="color:red!important"> *</span></b>
+
+                                        </div>
+
+                                        <div class="col-lg-12 mt-3">
+                                            <select id="cboOficinaLima" class="form-control">
+
+                                                <option value="" selected>Seleccione....</option>
+                                                <option id="503" value="503">28 DE JULIO</option>
+                                                <option id="506" value="506">ANGAMOS OPEN PLAZA</option>
+                                                <option id="511" value="511">BARRANCO</option>
+                                                <option id="109" value="109">BREÑA</option>
+                                                <option id="410" value="410">CAMACHO</option>
+                                                <option id="204" value="204">CAPÓN</option>
+                                                <option id="404" value="404">CHACARILLA</option>
+                                                <option id="507" value="507">CHORRILLOS</option>
+                                                <option id="301" value="301">COLONIAL</option>
+                                                <option id="110" value="110">COMANDANTE ESPINAR</option>
+                                                <option id="209" value="209">COMAS</option>
+                                                <option id="103" value="103">DASSO</option>
+                                                <option id="102" value="102">DOS DE MAYO</option>
+                                                <option id="424" value="424">EL POLO</option>
+                                                <option id="201" value="201">FIORI</option>
+                                                <option id="422" value="422">HIGUERETA</option>
+                                                <option id="107" value="107">JESÚS MARÍA</option>
+                                                <option id="406" value="406">JOCKEY PLAZA</option>
+                                                <option id="203" value="203">JR. DE LA UNIÓN</option>
+                                                <option id="502" value="502">LA AURORA</option>
+                                                <option id="412" value="412">LA ENCALADA</option>
+                                                <option id="405" value="405">LA MOLINA</option>
+                                                <option id="414" value="414">LA PLANICIE</option>
+                                                <option id="415" value="415">LAS GARDENIAS</option>
+                                                <option id="205" value="205">LOS OLIVOS</option>
+                                                <option id="308" value="308">MAGDALENA</option>
+                                                <option id="402" value="402">MERCADO PRODUCTORES</option>
+                                                <option id="306" value="306">MINKA CALLAO</option>
+                                                <option id="501" value="501">MIRAFLORES</option>
+                                                <option id="504" value="504">PARDO</option>
+                                                <option id="208" value="208">PLAZA NORTE</option>
+                                                <option id="505" value="505">PLAZA SUR</option>
+                                                <option id="307" value="307">PUEBLO LIBRE</option>
+                                                <option id="514" value="514">REGATAS</option>
+                                                <option id="202" value="202">RISSO</option>
+                                                <option id="105" value="105">SALAVERRY</option>
+                                                <option id="403" value="403">SAN BORJA</option>
+                                                <option id="206" value="206">SAN FELIPE</option>
+                                                <option id="417" value="417">SAN JUAN DE LURIGANCHO</option>
+                                                <option id="416" value="416">SAN LUIS</option>
+                                                <option id="302" value="302">SAN MIGUEL</option>
+                                                <option id="401" value="401">SANTA ANITA</option>
+                                                <option id="101" value="101">SEDE CENTRAL</option>
+                                                <option id="510" value="510">VILLA EL SALVADOR</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                </div>
+                                <div class="row mt-5" id="oficinaProvincia" style="display:none">
+                                    <div class="col-lg-12">
+                                        <h2 style="line-height:1">OFICINAS DE PROVINCIA</h2>
+                                        <br />
+                                        <hr style="border-color:#20A3FF">
+
+                                        <div class="col-lg-12">
+                                            <b><span class="titulo2">Elige tu oficina: </span></b><span class="titulo2" style="color:red!important"> *</span>
+
+                                        </div>
+
+                                        <div class="col-lg-12 mt-3">
+                                            <select id="cboOficinaProvincia" class="form-control">
+                                                <option value="" selected>Seleccione....</option>
+                                                <option id="730" value="730">AREQUIPA (Cayma) </option>
+                                                <option id="731" value="731">AREQUIPA - CENTRO (Jerusalén)</option>
+                                                <option id="640" value="640">CAJAMARCA</option>
+                                                <option id="620" value="620">CHICLAYO</option>
+                                                <option id="623" value="623">CHICLAYO SANTA VICTORIA</option>
+                                                <option id="650" value="650">CHIMBOTE</option>
+                                                <option id="711" value="711">CHINCHA</option>
+                                                <option id="722" value="722">CUSCO - EL SOL</option>
+                                                <option id="721" value="721">CUSCO - LA CULTURA</option>
+                                                <option id="810" value="810">HUANCAYO</option>
+                                                <option id="710" value="710">ICA</option>
+                                                <option id="712" value="712">ICA EL QUINDE</option>
+                                                <option id="660" value="660">IQUITOS</option>
+                                                <option id="750" value="750">JULIACA</option>
+                                                <option id="611" value="611">LARCO – TRUJILLO</option>
+                                                <option id="630" value="630">PIURA</option>
+                                                <option id="634" value="634">PIURA MIRAFLORES</option>
+                                                <option id="670" value="670">PUCALLPA</option>
+                                                <option id="632" value="632">SULLANA</option>
+                                                <option id="740" value="740">TACNA</option>
+                                                <option id="680" value="680">TARAPOTO</option>
+                                                <option id="610" value="610">TRUJILLO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-12">
+                            <div class="widget style1 white-bg p-xl" style="margin-top:3px">
+
+                                <div class="row mt-5">
+                                    <div class="col-lg-12">
+                                        <h2 style="line-height:1"><i class="fa fa-edit text-success"></i> SECCIÓN 3 : USTED COMO LABORA</h2>
+                                        <br />
+                                        <hr style="border-color:#20A3FF">
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-lg-12">
+                                        <span class="titulo2"><b>Usted como labora </b> </span><span class="titulo2" style="color:red!important"> *</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="rbComoLabora" id="rbProveedorBB" value="1"> Proveedor Banbif
+                                            <img src="" />
+                                            <br /> <br />
+                                            <input class="form-check-input" type="radio" name="rbComoLabora" id="rbColaboradorBB" value="2"> Colaborador Banbif
+                                            <br /> <br />
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div class="row mt-5" id="colaboradorBB" style="display:none">
+                                    <div class="col-lg-12">
+                                        <h2 style="line-height:1"> COLABORADOR BANBIF</h2>
+                                        <br />
+                                        <hr style="border-color:#20A3FF">
+
+                                        <div class="col-lg-8 mt-3">
+                                            <b><span class="titulo2">Puesto de Colaborador BanBif: </span><span class="titulo2" style="color:red!important"> *</span></b>
+                                        </div>
+
+
+                                        <div class="col-lg-8 mt-3">
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="radio" name="rbColaborador" id="rbColaborador1" value="1" onclick="Limpieza34(1)"> Gerente de Oficinas / GO
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbColaborador" id="rbColaborador2" value="2" onclick="Limpieza34(2)"> Jefe de Operaciones y Servicios / JOS
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbColaborador" id="rbColaborador3" value="3" onclick="Limpieza34(3)"> Representante al Servicio al Cliente / RSC
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbColaborador" id="rbColaborador4" value="4" onclick="Limpieza34(4)"> Ejecutivo Comercial
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbColaborador" id="rbColaborador5" value="5" onclick="Limpieza34(5)"> Ejecutivo Multiproducto
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbColaborador" id="rbColaborador6" value="6" onclick="Limpieza34(6)"> Otros
+                                                <br /><br />
+                                                <input id="txtOtrosC" name="txtOtrosC" onkeypress="return soloLetras(event)" type="text" style="display:none" placeholder="Tu respuesta" class="form-control form-control-2">
+
+                                                <hr />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr />
+
+                                </div>
+                                <div class="row mt-5" id="proveedBB" style="display:none">
+                                    <div class="col-lg-12">
+                                        <h2 style="line-height:1">PROVEEDOR BANBIF</h2>
+                                        <br />
+                                        <hr style="border-color:#20A3FF">
+
+
+                                        <div class="col-lg-8 mt-3">
+                                            <b><span class="titulo2">De ser proveedor del Banco, indicar el nombre de la empresa: </span><span class="titulo2" style="color:red!important"> *</span></b>
+                                            <br />
+                                        </div>
+                                        <div class="col-lg-8 mt-3">
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="radio" name="rbProveedor" id="rbProveedor1" value="1"> Sodexo
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbProveedor" id="rbProveedor2" value="2"> G4S
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbProveedor" id="rbProveedor3" value="3"> Proseguridad / Prosegur
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbProveedor" id="rbProveedor4" value="4"> Extract
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbProveedor" id="rbProveedor5" value="5"> Securitas
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbProveedor" id="rbProveedor6" value="6"> Otros
+                                                <br /><br />
+                                                <input id="txtOtrosP" name="txtOtrosP" type="text" onkeypress="return soloLetras(event)" style="display:none" placeholder="Tu respuesta" class="form-control form-control-2">
+
+                                            </div>
+                                        </div>
+                                        <hr />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-12">
+                            <div class="widget style1 white-bg p-xl">
+
+                                <div class="row mt-5">
+                                    <div class="col-lg-12 mt-3">
+                                        <h2 style="line-height:1"><i class="fa fa-edit text-success"></i> SECCIÓN 4: SÍNTOMAS</h2>
+                                        <hr style="border-color:#20A3FF">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <span class="titulo2"><b>De acuerdo a lo dispuesto, cumplo con informar los siguientes síntomas:</b></span><span class="titulo2" style="color:red!important"> *</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-2">
+                                        <table bgcolor="#fff" cellpadding="16" cellspacing="16">
+                                            <thead>
+                                                <tr align="center">
+
+                                                    <td><br /></td>
+                                                    <td><br /></td>
+                                                    <td align="center" colspan="1" style="font-size:20px;">Si</td>
+                                                    <td align="center" colspan="1" style="display:none; font-size: 20px;">No</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr>
+
+                                                    <td><b>1. Fiebre (medido con termómetro)</b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta1_1" name="Pregunta1" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta1_2" name="Pregunta1" value="2"></td>
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td><b>2. Dificultad respiratoria o sensación de falta de aire</b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta2_1" name="Pregunta2" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta2_2" name="Pregunta2" value="2"></td>
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td><b>3. Pérdida del olfato y/o gusto</b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta3_1" name="Pregunta3" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta3_2" name="Pregunta3" value="2"></td>
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td><b>4. Sensación de alza térmica y escalofríos</b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta4_1" name="Pregunta4" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta4_2" name="Pregunta4" value="2"></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><b>5. Congestión / secreción nasal </b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta5_1" name="Pregunta5" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta5_2" name="Pregunta5" value="2"></td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td><b>6. Tos (seca o con flema) </b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta6_1" name="Pregunta6" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta6_2" name="Pregunta6" value="2"></td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td><b>7. Disfonía (cambio del tono habitual de voz) </b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta7_1" name="Pregunta7" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta7_2" name="Pregunta7" value="2"></td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td><b>8. Dolor de cabeza</b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta8_1" name="Pregunta8" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta8_2" name="Pregunta8" value="2"></td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td><b>9. Dolor de garganta </b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta9_1" name="Pregunta9" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta9_2" name="Pregunta9" value="2"></td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td><b>10. Dolor muscular o articular </b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta10_1" name="Pregunta10" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta10_2" name="Pregunta10" value="2"></td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td><b>11. Diarrea </b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta11_1" name="Pregunta11" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta11_2" name="Pregunta11" value="2"></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><b>12. Malestar general / nauseas / mareos </b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta12_1" name="Pregunta12" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta12_2" name="Pregunta12" value="2"></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><b>13. Está tomando alguna medicación </b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta13_1" name="Pregunta13" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta13_2" name="Pregunta13" value="2"></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <b>14. Contacto con persona (s) con un caso confirmado de COVID-19</b>
+                                                        <h5>*Contacto es la interacción sin mascarilla, a una distancia de 1.5 m o menos, y durante 15 minutos o más.</h5>
+                                                    </td>
+
+                                                    <td><br /></td>
+                                                    <td align="center"><input type="radio" id="Pregunta14_1" name="Pregunta14" value="1"></td>
+                                                    <td style="display:none;" align="center"><input checked="checked" type="radio" id="Pregunta14_2" name="Pregunta14" value="2"></td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td><b>Declaro no tener ninguno de los síntomas mencionados líneas arriba</b></td>
+                                                    <td><br /></td>
+                                                    <td align="center"> <input type="checkbox" id="chkNoSintomas" /> </td>
+                                                   
+                                                    @*<td align="center"><input type="radio" id="Pregunta15_1" name="Pregunta15" value="1"></td>
+                                                    <td style="display:none;" align="center"><input type="radio" id="Pregunta15_2" name="Pregunta15" value="2"></td>*@
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                                </div>
+                                <hr />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ##region EliminacionPendiente -->
+                    @*Pendiente de eliminacion*@
+
+                    @*<div class="row mt-2">
+                            <div class="col-lg-12">
+                                <div class="widget style1 white-bg p-xl" style="margin-top:3px">
+
+                                    <div class="row mt-5">
+                                        <div class="col-lg-12">
+                                            <h2 style="line-height:1"><i class="fa fa-edit text-success"></i> SECCIÓN 6: ENFERMEDADES RESPIRATORIAS</h2>
+                                            <hr style="border-color:#20A3FF">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-8 mt-3">
+                                            <b><span class="titulo2">¿Tienes algún antecedente de enfermedad respiratoria? </span><span class="titulo2" style="color:red!important"> *</span></b>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-8 mt-3">
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="radio" name="rbAtencedenteEnfeRes" id="rbAtencedenteEnfeResSi" value="1"> Si
+
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbAtencedenteEnfeRes" id="rbAtencedenteEnfeResNo" value="2"> No
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row" id="tomandoAlgunaMed" style="display:none">
+                                        <div class="col-lg-8 mt-3">
+                                            <hr />
+                                            <b><span class="titulo2">¿Cuál de las siguientes enfermedades respiratorias tienes o haz tenido? </span><span class="titulo2" style="color:red!important"> *</span></b>
+
+                                        </div>
+
+                                        <div class="col-lg-8 mt-3">
+
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="radio" name="rbAnteEnf" id="rbAnteEnf1" value="1" onclick="Limpieza39(1)"> Rinitis
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbAnteEnf" id="rbAnteEnf2" value="2" onclick="Limpieza39(2)"> Asma
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbAnteEnf" id="rbAnteEnf3" value="3" onclick="Limpieza39(3)"> Otros
+                                                <br /><br />
+                                                <input id="txtAnteEnf" name="txtAnteEnf" type="text" onkeypress="return soloLetras(event)" placeholder="Tu respuesta" style="display:none" class="form-control form-control-2">
+
+
+                                            </div>
+                                            <hr />
+                                        </div>
+
+                                        <div class="col-lg-8 mt-3">
+                                            <b><span class="titulo2"> ¿Estás tomando alguna medicación?</span><span class="titulo2" style="color:red!important"> *</span></b>
+                                        </div>
+
+
+                                        <div class="col-lg-8 mt-3">
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="radio" name="rbTomandoMedica" id="rbTomandoMedicaSi" value="1"> Si
+
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbTomandoMedica" id="rbTomandoMedicaNo" value="2"> No
+
+
+                                            </div>
+                                            <hr />
+                                        </div>
+
+
+                                        <div class="col-lg-8 mt-1" style="display:none" id="medicamentos">
+
+                                            <div class="col-lg-8 mt-3">
+                                                <b><span class="titulo2"> ¿Qué medicamento(s) estás tomando? </span><span class="titulo2" style="color:red!important">*</span></b>
+                                            </div>
+
+                                            <div class="col-lg-8 mt-3">
+                                                <input id="txtMedicamentos" name="txtMedicamentos" type="text" class="form-control form-control-2" placeholder="Tu respuesta" required>
+                                                <div id="ApellidosNombres-feedback" class="invalid-feedback">
+                                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Esta pregunta es obligatoria
+                                                </div>
+                                            </div>
+
+                                            <hr />
+
+                                        </div>
+
+
+                                        <div class="col-lg-8 mt-3">
+                                            <b><span class="titulo2"> ¿Pertenece a algún grupo de riesgo? </span><span class="titulo2" style="color:red!important"> *</span></b>
+                                        </div>
+
+
+                                        <div class="col-lg-8 mt-3">
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="radio" name="rbGrupoRiesgo" id="rbGrupoRiesgoSi" value="1"> Si
+
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbGrupoRiesgo" id="rbGrupoRiesgoNo" value="2"> No
+
+
+                                            </div>
+                                            <hr />
+                                        </div>
+
+
+                                        <div class="col-lg-8 mt-1" style="display:none" id="grupoRiesgo">
+
+                                            <div class="col-lg-8 mt-3">
+                                                <b><span class="titulo2"> Especificar cual o cuales: </span><span class="titulo2" style="color:red!important">*</span></b>
+                                            </div>
+
+                                            <div class="col-lg-8 mt-3">
+                                                <input id="txtGrupoRiesgo" name="txtGrupoRiesgo" type="text" class="form-control form-control-2" placeholder="Tu respuesta" required>
+                                                <div id="ApellidosNombres-feedback" class="invalid-feedback">
+                                                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Esta pregunta es obligatoria
+                                                </div>
+                                            </div>
+
+                                            <hr />
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>*@
+
+                    <!-- #endregion -->
+
+                    <div class="row mt-2">
+                        <div class="col-lg-12">
+                            <div class="widget style1 white-bg p-xl" style="margin-top:3px">
+                                <div class="row mt-5">
+                                    <div class="col-lg-12">
+                                        <h2 style="line-height:1"><i class="fa fa-edit text-success"></i> SECCIÓN 5: ENTORNO FAMILIAR</h2>
+                                        <hr style="border-color:#20A3FF">
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-lg-8 mt-3">
+                                        <b><span class="titulo2">¿En su entorno familiar alguien ha presentado algún síntoma descrito anteriormente? </span><span class="titulo2" style="color:red!important"> *</span></b>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-8 mt-3">
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="rbFamSintoDescrit" id="rbFamSintoDescritSi" value="1"> Si
+
+                                            <br /> <br />
+                                            <input class="form-check-input" type="radio" name="rbFamSintoDescrit" id="rbFamSintoDescritNo" value="2"> No
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row" id="familiar" style="display:none">
+                                    <div class="col-lg-8 mt-3">
+                                        <hr />
+                                        <b><span class="titulo2"> Indicar que sintomatología está presentando el familiar:</span><span class="titulo2" style="color:red!important"> *</span></b>
+
+                                    </div>
+
+                                    <div class="col-lg-8 mt-3">
+                                        <input id="txtFamiliar" name="txtFamiliar" type="text" onkeypress="return soloLetras(event)" class="form-control form-control-2" placeholder="Tu respuesta" required>
+                                        <div id="Cargo-feedback" class="invalid-feedback">
+                                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Esta pregunta es obligatoria
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #region Pendiente de Eliminacion Modificacion Banbiflex -->
+                    @*Pendiente de Eliminacion Modificacion Banbiflex*@
+
+                    @*<div class="row mt-2">
+                            <div class="col-lg-12">
+                                <div class="widget style1 white-bg p-xl" style="margin-top:3px">
+                                    <div class="row mt-5">
+                                        <div class="col-lg-12">
+                                            <h2 style="line-height:1"><i class="fa fa-edit text-success"></i> SECCIÓN 8: VACACIONES</h2>
+                                            <hr style="border-color:#20A3FF">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-8 mt-3">
+                                            <b><span class="titulo2">A partir de la fecha usted:</span><span class="titulo2" style="color:red!important"> *</span></b>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-8 mt-3">
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="radio" name="rbFechaVac" id="rbFechaVac1" value="1"> Saldrá de vacaciones (en las próximas 2 semanas).
+
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbFechaVac" id="rbFechaVac2" value="2"> Retorna hoy a labores presenciales.
+
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbFechaVac" id="rbFechaVac3" value="3"> Está laborando regularmente, sin programación de vacaciones en las próximas 2 semanas.
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <br />
+                                    <div class="row" id="fechavacas" style="display:none">
+
+                                        <div class="col-lg-8 mt-3">
+                                            <hr />
+                                            <b><span class="titulo2"> Fecha de Inicio y Fin de vacaciones:</span><span class="titulo2" style="color:red!important"> *</span></b>
+                                            <br /> <br />
+                                        </div>
+
+                                        <div class="col-lg-8 mt-3">
+                                            <h4>Fecha Inicio</h4>
+                                            <br />
+                                            <input type="date" name="fechaInicio" id="fechaInicio" class="form-control" style="width:200px">
+                                            <div id="Cargo-feedback" class="invalid-feedback">
+                                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Esta pregunta es obligatoria
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 mt-3">
+                                            <h4>Fecha Fin</h4>
+                                            <br />
+                                            <input type="date" name="fechaFin" id="fechaFin" class="form-control" style="width:200px">
+                                            <div id="Cargo-feedback" class="invalid-feedback">
+                                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Esta pregunta es obligatoria
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                </div>
+                            </div>
+                        </div>*@
+
+                    <!-- #endregion -->
+                    <!-- #region Test -->
+                    @*<div class="row mt-2" style="display:none" id="vacaciones">
+                            <div class="col-lg-12">
+                                <div class="widget style1 white-bg p-xl" style="margin-top:3px">
+                                    <div class="row mt-5">
+                                        <div class="col-lg-12">
+                                            <h2 style="line-height:1"><i class="fa fa-edit text-success"></i> SECCIÓN 6: VIAJES</h2>
+                                            <hr style="border-color:#20A3FF">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-8 mt-3">
+                                            <b><span class="titulo2">Tiene planificado realizar algún viaje durante sus vacaciones :</span><span class="titulo2" style="color:red!important"> *</span></b>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-8 mt-3">
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="radio" name="rbVacas" id="rbVacas1" value="1"> Si
+
+                                                <br /> <br />
+                                                <input class="form-check-input" type="radio" name="rbVacas" id="rbVacas2" value="2"> No
+                                            </div>
+                                            <br /> <br />
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row" style="display:none" id="vacas1">
+                                        <div class="col-lg-8 mt-3">
+                                            <div class="row" id="lugarDestino">
+                                                <div class="col-lg-8 mt-3">
+                                                    <b><span class="titulo2">Por favor indicar el lugar de destino</span><span class="titulo2" style="color:red!important">*</span></b>
+                                                </div>
+
+
+
+                                                <div class="col-lg-8 mt-3">
+                                                    <input id="txtLugarDestino" name="txtLugarDestino" onkeypress="return soloLetras(event)" type="text" class="form-control form-control-2" placeholder="Tu respuesta" required>
+                                                    <div id="ApellidosNombres-feedback" class="invalid-feedback">
+                                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Esta pregunta es obligatoria
+                                                    </div>
+                                                </div>
+
+                                                <hr />
+
+
+                                                <div class="col-lg-8 mt-3">
+                                                    <hr style="border-color:#20A3FF">
+                                                    <b><span class="titulo2"> Indicar fechas de salida y <b style="color: red;">retorno de viaje</b> :</span><span class="titulo2" style="color:red!important"> *</span></b>
+
+                                                </div>
+
+                                                <div class="col-lg-8 mt-3">
+                                                    <h4>Fecha Inicio del Viaje</h4>
+                                                    <br />
+                                                    <input type="date" name="viajeV" id="viajeV_1" class="form-control" style="width:200px">
+                                                    <div id="Cargo-feedback" class="invalid-feedback">
+                                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Esta pregunta es obligatoria
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-8 mt-3">
+                                                    <h4 style="color: red;">Fecha de retorno a domicilio</h4>
+                                                    <br />
+                                                    <input type="date" name="viajeV" id="viajeV_2" class="form-control" style="width:200px">
+                                                    <br /> <br />
+                                                    <div id="Cargo-feedback" class="invalid-feedback">
+                                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Esta pregunta es obligatoria
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-lg-9 mt-3">
+                                                    <b><span class="titulo2">Indicar tipo de transporte a utilizar para el <b style="color: red;">retorno de su viaje :*</b></span></b>
+                                                    <br /> <br />
+
+                                                    <div class="form-check">
+
+                                                        <input class="form-check-input" type="radio" name="rbTransporte" id="rbTransporte1" value="1" onclick="Limpieza38(1)"> Aéreo
+                                                        <br /> <br />
+                                                        <input class="form-check-input" type="radio" name="rbTransporte" id="rbTransporte2" value="2" onclick="Limpieza38(2)" )> Terrestre público
+                                                        <br /> <br />
+                                                        <input class="form-check-input" type="radio" name="rbTransporte" id="rbTransporte3" value="3" onclick="Limpieza38(3)"> Terrestre personal
+                                                        <br /> <br />
+                                                        <input class="form-check-input" type="radio" name="rbTransporte" id="rbTransporte4" value="4" onclick="Limpieza38(4)"> Otros
+                                                        <br /><br />
+                                                        <input id="txtOtrosT" name="txtOtrosT" onkeypress="return soloLetras(event)" type="text" placeholder="Tu respuesta" style="display:none" class="form-control form-control-2">
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+
+
+                    <!-- #endregion -->
+
+                    <div class="row mt-2">
+                        <div class="col-lg-12">
+                            <div class="widget style1 white-bg p-xl" style="margin-top:3px">
+
+                                <div class="row mt-5">
+                                    <div class="col-lg-12">
+                                        <h2 style="line-height:1"><i class="fa fa-edit text-success"></i> SECCIÓN 6: TÉRMINOS Y CONDICIONES</h2>
+                                        <br />
+                                        <hr style="border-color:#20A3FF">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <p>
+                                            Entiendo el objetivo de esta evaluación y he respondido con la verdad. Según lo establecido en la Directiva Administrativa N° 321-MINSA/DGIESP-2021, de omitir o falsear información podría ser sancionado. <span class="titulo2" style="color:red!important"> *</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-12 mt-3">
+                                        <input type="checkbox" id="chkAcepto" /> Acepto
+                                    </div>
+                                </div>
+
+
+                                <hr />
+
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3" id="divValidaciones">
+
+                                    </div>
+                                </div>
+
+
+                                <div align="center">
+                                    <button type="button" onclick="RegistrarEncuesta()" class="next btn btn-success btn-lg pull-center" value="Next" />Enviar<i class="fa fa-chevron-right"></i>
+                                </div>
+                                <br />
+                                <div id="divMensajeOk" class="alert alert-success" style="font-size:16px;display:none"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lateral derecho-->
+                <div class="col-lg-3">
+                    <div class="" style="background-color:#0FFFF0; position: relative !important">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper mt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer">
+                    <div class="float-right">
+                    </div>
+                    <div>
+                        <strong>Innovación</strong> BanBif &copy; 2021
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Mainly scripts -->
+    <script src="~/Assets/js/jquery-3.1.1.min.js"></script>
+    <script src="~/Assets/js/popper.min.js"></script>
+    <script src="~/Assets/js/bootstrap.js"></script>
+    <script src="~/Assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/Assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="~/Assets/js/inspinia.js"></script>
+    <script src="~/Assets/js/plugins/pace/pace.min.js"></script>
+    <script src="~/Assets/js/jquery.blockUI.js"></script>
+    <!-- Flot -->
+    <script src="~/Assets/js/plugins/flot/jquery.flot.js"></script>
+    <script src="~/Assets/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="~/Assets/js/plugins/flot/jquery.flot.resize.js"></script>
+
+    <!-- ChartJS-->
+    <script src="~/Assets/js/plugins/chartJs/Chart.min.js"></script>
+
+    <!-- Peity -->
+    <script src="~/Assets/js/plugins/peity/jquery.peity.min.js"></script>
+    <!-- Peity demo -->
+    <script src="~/Assets/js/demo/peity-demo.js"></script>
+    <script src="~/Assets/js/Validaciones.js"></script>
+
+    <script>
+
+
+
+
+        $(document).ready(function () {
+
+            sessionStorage.setItem("URL", "@ViewBag.Url");
+
+            $('#txtDocumento').val(sessionStorage.Documento);
+
+            if (sessionStorage.CodigoAuto != "0") {
+                ObtenerColaborador(sessionStorage.CodigoAuto);
+            }
+
+            $("#rbOficinaLima").click(function () {
+                $("#oficinaProvincia").hide();
+                $("#oficinaLima").show();
+                Limpieza8();
+            });
+
+            $("#rbOficinaProvincia").click(function () {
+                $("#oficinaProvincia").show();
+                $("#oficinaLima").hide();
+                Limpieza8();
+            });
+
+            $("#rbOficinaPrincipal").click(function () {
+                $("#oficinaLima").hide();
+                $("#oficinaProvincia").hide();
+                Limpieza8();
+            });
+
+            $("#rbColaboradorBB").click(function () {
+                $("#colaboradorBB").show();
+                $("#proveedBB").hide();
+                Limpieza11();
+            });
+
+            $("#rbProveedorBB").click(function () {
+                $("#proveedBB").show();
+                $("#colaboradorBB").hide();
+                Limpieza11();
+            });
+
+
+            $("#rbProveedor6").click(function () {
+                Limpieza33();
+                $("#txtOtrosP").show();
+
+            });
+
+            $("#rbProveedor5").click(function () {
+                Limpieza33();
+                $("#txtOtrosP").hide();
+
+            });
+
+            $("#rbProveedor4").click(function () {
+                Limpieza33();
+                $("#txtOtrosP").hide();
+
+            });
+
+            $("#rbProveedor3").click(function () {
+                Limpieza33();
+                $("#txtOtrosP").hide();
+
+            });
+
+            $("#rbProveedor2").click(function () {
+                Limpieza33();
+                $("#txtOtrosP").hide();
+
+            });
+
+            $("#rbProveedor1").click(function () {
+                Limpieza33();
+                $("#txtOtrosP").hide();
+
+            });
+
+            //Seccion Eliminada Consultar Backup rbAtencedenteEnfeResSi
+
+            $("#rbFamSintoDescritSi").click(function () {
+                Limpieza14();
+                $("#familiar").show();
+            });
+
+
+
+            $("#rbFamSintoDescritNo").click(function () {
+                Limpieza14();
+                $("#familiar").hide();
+            });
+
+
+
+            //seccion añadida
+            $("#chkNoSintomas").click(function () {
+                                
+
+                var SinSintomas = $('#chkNoSintomas').prop('checked');
+
+                if (SinSintomas) {
+                    BloquearDeclaracionSintomas();
+                    LimpiezaDeclaracion();
+                } else {
+                    DesbloquearDeclaracionSintomas();
+                    LimpiezaDeclaracion();
+                }
+                
+                
+            });
+
+            var radio1 = false;
+            $("#Pregunta1_1").click(function () {
+                if (radio1 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio1 = true;
+                    console.log(radio1)
+
+                }
+
+                else if (radio1 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta1_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio1 = false;
+                    console.log(radio1)
+                }
+            });
+
+            var radio2 = false;
+            $("#Pregunta2_1").click(function () {
+                if (radio2 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio2 = true;
+                    
+
+                }
+
+                else if (radio2 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta2_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio2 = false;
+                   
+                }
+            });
+
+            var radio3 = false;
+            $("#Pregunta3_1").click(function () {
+                if (radio3 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio3 = true;
+                    
+
+                }
+
+                else if (radio3 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta3_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio3 = false;
+                    
+                }
+            });
+
+            var radio4 = false;
+            $("#Pregunta4_1").click(function () {
+                if (radio4 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio4 = true;
+                  
+
+                }
+
+                else if (radio4 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta4_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio4 = false;
+                    
+                }
+            });
+
+
+            var radio5 = false;
+            $("#Pregunta5_1").click(function () {
+                if (radio5 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio5 = true;
+
+
+                }
+
+                else if (radio5 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta5_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio5 = false;
+                    
+                }
+            });
+
+            var radio6 = false;
+            $("#Pregunta6_1").click(function () {
+                if (radio6 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio6 = true;
+                    console.log(radio6)
+
+                }
+
+                else if (radio6 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta6_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio6 = false;
+                    console.log(radio6)
+                }
+            });
+
+            var radio7 = false;
+            $("#Pregunta7_1").click(function () {
+                if (radio7 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio7 = true;
+                    console.log(radio7)
+
+                }
+
+                else if (radio7 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta7_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio7 = false;
+                    console.log(radio7)
+                }
+            });
+
+            var radio8 = false;
+            $("#Pregunta8_1").click(function () {
+                if (radio8 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio8 = true;
+                    
+
+                }
+
+                else if (radio8 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta8_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio8 = false;
+                    
+                }
+            });
+
+
+            var radio9 = false;
+            $("#Pregunta9_1").click(function () {
+                if (radio9 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio9 = true;
+                    
+
+                }
+
+                else if (radio9 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta9_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio9 = false;
+                    
+                }
+            });
+
+            var radio10 = false;
+            $("#Pregunta10_1").click(function () {
+                if (radio10 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio10 = true;
+                    
+
+                }
+
+                else if (radio10 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta10_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio10 = false;
+                    
+                }
+            });
+
+            var radio11 = false;
+            $("#Pregunta11_1").click(function () {
+                if (radio11 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio11 = true;
+                    
+
+                }
+
+                else if (radio11 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta11_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio11 = false;
+                    
+                }
+            });
+
+            var radio12 = false;
+            $("#Pregunta12_1").click(function () {
+                if (radio12 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio12 = true;
+                    
+
+                }
+
+                else if (radio12 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta12_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio12 = false;
+                    
+                }
+            });
+
+            var radio13 = false;
+            $("#Pregunta13_1").click(function () {
+                if (radio13 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio13 = true;
+                    
+
+                }
+
+                else if (radio13 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta13_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio13 = false;
+                    
+                }
+            });
+
+            var radio14 = false;
+            $("#Pregunta14_1").click(function () {
+                if (radio14 == false) {
+                    $(this).prop("checked", true);
+                    //$(this).prop("value", "1");
+                    radio14 = true;
+                    
+
+                }
+
+                else if (radio14 == true) {
+                    $(this).prop("checked", false);
+                    $('#Pregunta14_2').prop("checked", true);
+                    //$(this).prop("value", "0");
+                    radio14 = false;
+                    
+                }
+            });
+            //Seccion Eliminada Consultar Backup rbFechaVac1
+
+
+        });
+
+
+        function limpiarpregunta1() {
+            $('#Pregunta1_1').prop("checked", false);
+            //$('#Pregunta1_2').prop("checked", true);
+        }
+
+        var puestoColaborador;
+        var areaColaborador;
+        var contadorNoResp = 0;
+        var htmlMensaje = '';
+
+        function ObtenerColaborador(CodigoAuto) {
+            var NombresApellidos = $('#txtApellidosNombres').val();
+            var Documento = $('#txtDocumento').val();
+            var Celular = $('#txtCelular').val();
+            //var Anexo = $('#txtAnexo').val();
+
+
+
+            var oBColaborador = {};
+            oBColaborador.CodigoAuto = sessionStorage.CodigoAuto;
+            oBColaborador.NombresApellidos = NombresApellidos;
+            oBColaborador.Documento = Documento;
+            oBColaborador.Celular = Celular;
+            //oBColaborador.Anexo = Anexo;
+
+
+
+            $.ajax({
+                url: sessionStorage.URL + '/Formulario/ObtenerColaborador',
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                processData: true,
+                data: JSON.stringify(oBColaborador),
+                success: function (response) {
+                    console.log(response);
+                    if (response.Result) {
+                        if (response.Data.EsColaborador == 1) {
+                            $("#txtApellidosNombres").val(response.Data.NombresApellidos);
+                            document.getElementById('txtApellidosNombres').disabled = true;
+                            $("#txtDocumento").val(response.Data.Documento);
+                            document.getElementById('txtDocumento').disabled = true;
+                            $("#txtCelular").val(response.Data.Celular);
+                            //$("#txtAnexo").val(response.Data.Anexo);
+                            //document.getElementById('#txtAnexo');
+                            puestoColaborador = response.Data.Puesto;
+                            areaColaborador = response.Data.Area;
+                            response.Data.CodigoAuto = sessionStorage.CodigoAuto;
+
+                        } else {
+                            if (response.Data.NombresApellidos != "") {
+                                $("#txtApellidosNombres").val(response.Data.NombresApellidos);
+                                document.getElementById('txtApellidosNombres').disabled = true;
+                                $("#txtDocumento").val(response.Data.Documento);
+                                $("#txtCelular").val(response.Data.Celular);
+                                //$("#txtAnexo").val(response.Data.Anexo);
+
+
+                            }
+
+                        }
+
+                    } else {
+
+                    }
+                    $.unblockUI();
+                },
+
+                failure: function (msg) {
+                    console.log(msg);
+                    $.unblockUI();
+                },
+
+                error: function (xhr, status, error) {
+                    console.log(error);
+                    $.unblockUI();
+                },
+
+                complete: function () {
+                    //$.unblockUI();
+                    //$("#prueba").dialog("close")
+                }
+            });
+        }
+
+        function RegistrarEncuesta() {
+            htmlMensaje = '';
+            contadorNoResp = 0;
+
+            /*VALIDACIONES*/
+            if ($('#txtApellidosNombres').val() == "") {
+                $('#txtApellidosNombres').focus();
+                return false;
+            }
+
+            if ($('#txtDocumento').val() == "") {
+                $('#txtDocumento').focus();
+                return false;
+            }
+
+            if ($('#txtCelular').val() == "") {
+                $('#txtCelular').focus();
+                return false;
+            }
+
+
+
+            var NombresApellidos = $('#txtApellidosNombres').val();
+            var Documento = $('#txtDocumento').val();
+            var Celular = $('#txtCelular').val();
+            //var Anexo = $('#txtAnexo').val();
+
+            var obEncuesta = {};
+            obEncuesta.Terminos = AceptoTerminos;
+            obEncuesta.Nombres = NombresApellidos;
+            obEncuesta.Documento = Documento;
+            obEncuesta.Celular = Celular;
+            //obEncuesta.Anexo = Anexo;
+
+            var Preguntas = [];
+
+            /*PREGUNTA 6: ESTA VACUNADO*/
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 6;
+
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion != undefined) {
+                Preguntas.push(Respuesta);
+                console.log('undefined en validacion');
+                console.log(Respuesta);
+            } else {
+                //contadorNoResp += 1;
+                //htmlMensaje += '<li>Falta responder la pregunta de la Sección 1: "¿Te has vacunado contra el COVID-19?".</li>'
+            }
+
+            /*PREGUNTA 7: TIPO DE TRABAJO*/
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 7;
+
+            /*PREGUNTA 8: Elige donde estás laborando*/
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 8;
+            var opcionLab = "";
+            if ($('#rbOficinaPrincipal').prop('checked')) {
+                Respuesta.Opcion = 90;
+            }
+
+            if ($('#rbOficinaLima').prop('checked')) {
+                opcionLab = "L";
+                Respuesta.Opcion = 91;
+            }
+
+            if ($('#rbOficinaProvincia').prop('checked')) {
+                opcionLab = "P";
+                Respuesta.Opcion = 92;
+            }
+
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 2: "Elige donde estás laborando".</li>'
+            }
+
+            /*PREGUNTA 9: oficinas lima*/
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 9;
+
+            if ($('#101').prop('selected')) { Respuesta.Opcion = 7; }
+            if ($('#105').prop('selected')) { Respuesta.Opcion = 8; }
+            if ($('#107').prop('selected')) { Respuesta.Opcion = 9; }
+            if ($('#109').prop('selected')) { Respuesta.Opcion = 10; }
+            if ($('#201').prop('selected')) { Respuesta.Opcion = 11; }
+            if ($('#203').prop('selected')) { Respuesta.Opcion = 12; }
+            if ($('#204').prop('selected')) { Respuesta.Opcion = 13; }
+            if ($('#205').prop('selected')) { Respuesta.Opcion = 14; }
+            if ($('#206').prop('selected')) { Respuesta.Opcion = 15; }
+            if ($('#208').prop('selected')) { Respuesta.Opcion = 16; }
+            if ($('#209').prop('selected')) { Respuesta.Opcion = 17; }
+            if ($('#301').prop('selected')) { Respuesta.Opcion = 18; }
+            if ($('#302').prop('selected')) { Respuesta.Opcion = 19; }
+            if ($('#306').prop('selected')) { Respuesta.Opcion = 20; }
+            if ($('#307').prop('selected')) { Respuesta.Opcion = 21; }
+            if ($('#308').prop('selected')) { Respuesta.Opcion = 22; }
+            if ($('#102').prop('selected')) { Respuesta.Opcion = 23; }
+            if ($('#103').prop('selected')) { Respuesta.Opcion = 24; }
+            if ($('#110').prop('selected')) { Respuesta.Opcion = 25; }
+            if ($('#202').prop('selected')) { Respuesta.Opcion = 26; }
+            if ($('#401').prop('selected')) { Respuesta.Opcion = 27; }
+            if ($('#402').prop('selected')) { Respuesta.Opcion = 28; }
+            if ($('#403').prop('selected')) { Respuesta.Opcion = 29; }
+            if ($('#406').prop('selected')) { Respuesta.Opcion = 30; }
+            if ($('#416').prop('selected')) { Respuesta.Opcion = 31; }
+            if ($('#417').prop('selected')) { Respuesta.Opcion = 32; }
+            if ($('#501').prop('selected')) { Respuesta.Opcion = 33; }
+            if ($('#502').prop('selected')) { Respuesta.Opcion = 34; }
+            if ($('#503').prop('selected')) { Respuesta.Opcion = 35; }
+            if ($('#504').prop('selected')) { Respuesta.Opcion = 36; }
+            if ($('#404').prop('selected')) { Respuesta.Opcion = 37; }
+            if ($('#405').prop('selected')) { Respuesta.Opcion = 38; }
+            if ($('#410').prop('selected')) { Respuesta.Opcion = 39; }
+            if ($('#412').prop('selected')) { Respuesta.Opcion = 40; }
+            if ($('#414').prop('selected')) { Respuesta.Opcion = 41; }
+            if ($('#415').prop('selected')) { Respuesta.Opcion = 42; }
+            if ($('#422').prop('selected')) { Respuesta.Opcion = 43; }
+            if ($('#424').prop('selected')) { Respuesta.Opcion = 44; }
+            if ($('#505').prop('selected')) { Respuesta.Opcion = 45; }
+            if ($('#506').prop('selected')) { Respuesta.Opcion = 46; }
+            if ($('#507').prop('selected')) { Respuesta.Opcion = 47; }
+            if ($('#510').prop('selected')) { Respuesta.Opcion = 48; }
+            if ($('#511').prop('selected')) { Respuesta.Opcion = 49; }
+            if ($('#514').prop('selected')) { Respuesta.Opcion = 50; }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion != "") {
+                Preguntas.push(Respuesta);
+            } else {
+                if (opcionLab == "L") {
+                    contadorNoResp += 1;
+                    htmlMensaje += '<li>Falta responder la pregunta de la Sección 2: "Oficinas de Lima".</li>'
+                }
+
+            }
+
+
+            /*PREGUNTA 10: Oficinas provincia*/
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 10;
+
+            if ($('#610').prop('selected'))
+            {
+                Respuesta.Opcion = 51;
+            }
+
+            if ($('#611').prop('selected'))
+            {
+                Respuesta.Opcion = 52;
+            }
+
+            if ($('#620').prop('selected'))
+            {
+                Respuesta.Opcion = 53;
+            }
+
+            if ($('#623').prop('selected'))
+            {
+                Respuesta.Opcion = 54;
+            }
+
+            if ($('#630').prop('selected'))
+            {
+                Respuesta.Opcion = 55;
+            }
+
+            if ($('#632').prop('selected'))
+            {
+                Respuesta.Opcion = 56;
+            }
+
+            if ($('#634').prop('selected'))
+            {
+                Respuesta.Opcion = 57;
+            }
+
+            if ($('#640').prop('selected'))
+            {
+                Respuesta.Opcion = 58;
+            }
+
+            if ($('#650').prop('selected'))
+            {
+                Respuesta.Opcion = 59;
+            }
+
+            if ($('#660').prop('selected'))
+            {
+                Respuesta.Opcion = 60;
+            }
+
+            if ($('#670').prop('selected'))
+            {
+                Respuesta.Opcion = 61;
+            }
+
+            if ($('#680').prop('selected'))
+            {
+                Respuesta.Opcion = 62;
+            }
+
+            if ($('#710').prop('selected'))
+            {
+                Respuesta.Opcion = 63;
+            }
+
+            if ($('#711').prop('selected'))
+            {
+                Respuesta.Opcion = 64;
+            }
+
+            if ($('#712').prop('selected'))
+            {
+                Respuesta.Opcion = 65;
+            }
+
+            if ($('#721').prop('selected'))
+            {
+                Respuesta.Opcion = 66;
+            }
+
+            if ($('#722').prop('selected'))
+            {
+                Respuesta.Opcion = 67;
+            }
+
+            if ($('#730').prop('selected'))
+            {
+                Respuesta.Opcion = 68;
+            }
+
+            if ($('#731').prop('selected'))
+            {
+                Respuesta.Opcion = 69;
+            }
+
+            if ($('#740').prop('selected'))
+            {
+                Respuesta.Opcion = 70;
+            }
+
+            if ($('#750').prop('selected'))
+            {
+                Respuesta.Opcion = 71;
+            }
+
+            if ($('#810').prop('selected'))
+            {
+                Respuesta.Opcion = 72;
+            }
+
+            if ($('#811').prop('selected'))
+            {
+                Respuesta.Opcion = 73;
+            }
+
+
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion != "") {
+                Preguntas.push(Respuesta);
+            } else {
+                if (opcionLab == "P") {
+                    contadorNoResp += 1;
+                    htmlMensaje += '<li>Falta responder la pregunta de la Sección 2: "Oficinas de Provincia".</li>'
+                }
+
+            }
+
+
+            /*PREGUNTA 11: Tipo de Trabajador*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 11;
+            var opcionLabora = "";
+
+            if ($('#rbProveedorBB').prop('checked')) {
+                opcionLabora = "P";
+                Respuesta.Opcion = 137;
+            }
+
+            if ($('#rbColaboradorBB').prop('checked')) {
+                opcionLabora = "C";
+                Respuesta.Opcion = 138;
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 3: "Usted como labora".</li>'
+            }
+
+            /*PREGUNTA 34: Colaborador*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 34;
+
+            if ($('#rbColaborador1').prop('checked')) {
+                Respuesta.Opcion = 95;
+            }
+
+            if ($('#rbColaborador2').prop('checked')) {
+                Respuesta.Opcion = 96;
+            }
+
+            if ($('#rbColaborador3').prop('checked')) {
+                Respuesta.Opcion = 97;
+            }
+
+            if ($('#rbColaborador4').prop('checked')) {
+                Respuesta.Opcion = 98;
+            }
+
+            if ($('#rbColaborador5').prop('checked')) {
+                Respuesta.Opcion = 99;
+            }
+
+            if ($('#rbColaborador6').prop('checked')) {
+                Respuesta.TextoOtro = $('#txtOtrosC').val();
+                Respuesta.Opcion = 100;
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion != undefined || Respuesta.Opcion !="") {
+                Preguntas.push(Respuesta);
+            } else {
+                if (opcionLabora == "C") {
+                    contadorNoResp += 1;
+                    htmlMensaje += '<li>Falta responder la pregunta de la Sección 3: "Puesto de Colaborador BanBif".</li>'
+                }
+
+            }
+
+            /*PREGUNTA 33: Proveedor*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 33;
+
+            if ($('#rbProveedor1').prop('checked')) {
+                Respuesta.Opcion = 74;
+            }
+
+            if ($('#rbProveedor2').prop('checked')) {
+                Respuesta.Opcion = 75;
+            }
+
+            if ($('#rbProveedor3').prop('checked')) {
+                Respuesta.Opcion = 76;
+            }
+
+            if ($('#rbProveedor4').prop('checked')) {
+                Respuesta.Opcion = 77;
+            }
+
+            if ($('#rbProveedor5').prop('checked')) {
+                Respuesta.Opcion = 78;
+            }
+
+            if ($('#rbProveedor6').prop('checked')) {
+                Respuesta.TextoOtro = $('#txtOtrosP').val();
+                Respuesta.Opcion = 79;
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion != undefined || Respuesta.Opcion !="") {
+                Preguntas.push(Respuesta);
+            } else {
+                if (opcionLabora == "P") {
+                    contadorNoResp += 1;
+                    htmlMensaje += '<li>Falta responder la pregunta de la Sección 3: "De ser proveedor del Banco, Indicar el nombre de la empresa".</li>'
+                }
+
+            }
+
+
+            /*PREGUNTA 17: matriz*/
+
+            ListaOpciones = [];
+            /*OPCION 1 MATRIZ: 1. Fiebre (medido con termómetro) */
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 139;
+
+            if ($('#Pregunta1_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta1_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                    contadorNoResp += 1;
+                    htmlMensaje += '<li>Falta responder la pregunta de la Sección 4: "Síntomas - 1. Fiebre (medido con termómetro)".</li>'
+            }
+
+            /*OPCION 2 MATRIZ: 2. Dificultad respiratoria o sensación de falta de aire*/
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 140;
+
+            if ($('#Pregunta2_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta2_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                    contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 4: "Síntomas - 2. Dificultad respiratoria o sensación de falta de aire".</li>'
+
+            }
+
+            /*OPCION 3 MATRIZ: 3. Pérdida del olfato y/o gusto*/
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 141;
+
+            if ($('#Pregunta3_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta3_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 4: "Síntomas - 3. Pérdida del olfato y/o gusto".</li>'
+
+            }
+
+            /*OPCION 4 MATRIZ: 4. Sensación de alza térmica y escalofríos */
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 142;
+
+
+            if ($('#Pregunta4_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta4_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 4: "Síntomas - 4. Sensación de alza térmica y escalofríos".</li>'
+
+            }
+
+            /*OPCION 5 MATRIZ: 5.  Congestión / secreción nasal*/
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion =  143;
+
+
+            if ($('#Pregunta5_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta5_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 5: "Síntomas - 5.  Congestión / secreción nasal".</li>'
+
+            }
+
+            /*OPCION 6 MATRIZ: 6. Tos seca */
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion =  144;
+
+
+            if ($('#Pregunta6_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta6_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 5: "Síntomas - 6. Tos seca".</li>'
+
+            }
+
+            /*OPCION 7 MATRIZ: 7. Sensación de alza térmica */
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 145;
+
+            if ($('#Pregunta7_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta7_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 5: "Síntomas - 7. Sensación de alza térmica".</li>'
+
+            }
+
+            /* OPCION 8 MATRIZ: 8. Estornudos */
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 146;
+
+            if ($('#Pregunta8_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta8_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 5: "Síntomas - 8. Estornudos".</li>'
+
+            }
+
+            /*OPCION 9 MATRIZ: 9. Congestión / secreción nasal */
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 147;
+
+            if ($('#Pregunta9_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta9_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 5: "Síntomas - 9. Congestión / secreción nasal".</li>'
+
+            }
+
+            /*OPCION 10 MATRIZ: 10. Expectoración o flema amarilla o verdosa */
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 148;
+
+            if ($('#Pregunta10_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta10_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 5: "Síntomas - 10. Expectoración o flema amarilla o verdosa".</li>'
+
+            }
+
+            /*OPCION 11 MATRIZ: 11. Malestar general */
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 149;
+
+            if ($('#Pregunta11_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta11_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 5: "Síntomas - 11. Malestar general".</li>'
+
+            }
+
+            /*OPCION 12 MATRIZ: 12. Dolor de cabeza */
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 150;
+
+            if ($('#Pregunta12_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta12_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 5: "Síntomas - 12. Dolor de cabeza".</li>'
+
+            }
+
+            /*OPCION 13 MATRIZ: 13. Dolor de garganta */
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 151;
+
+            if ($('#Pregunta13_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta13_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 5: "Síntomas - 13. Dolor de garganta".</li>'
+
+            }
+
+            /*OPCION 14 MATRIZ: 14. Dolor muscular, articular, abdominal, pecho */
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 152;
+
+            if ($('#Pregunta14_1').prop('checked')) {
+                Respuesta.Opcion2 = 1; //true, 1, SI
+            }
+            if ($('#Pregunta14_2').prop('checked')) {
+                Respuesta.Opcion2 = 0;//false, 0, NO
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion2 != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 5: "Síntomas - 14. Dolor muscular, articular, abdominal, pecho".</li>'
+
+            }
+
+            /*OPCION 15 MATRIZ: 15. Nauseas/vómitos */
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 17;
+            Respuesta.Opcion = 153;
+
+            
+
+
+            /*PREGUNTA 12: Atencedente de alguna enfermedad*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 12;
+            var opcionLabora = "";
+
+
+
+            /*PREGUNTA 14: ¿Cuál de las siguientes enfermedades respiratorias tienes o haz tenido?*/
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 14;
+
+
+            /*PREGUNTA 39: Estas tomando alguna medicina*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 39;
+            var opcionMed = "";
+
+
+            /*PREGUNTA 15: ¿Qué medicamento(s) estás tomando?*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 42;
+            //Respuesta.Opcion = $('#txtMedicamentos').val();
+
+            /*PREGUNTA 43: Pertenece a algún grupo de riesgo*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 43;
+            var opcionRies = "";
+            Preguntas.push(Respuesta);
+
+
+            /*PREGUNTA 44: Especificar cual o cuales*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 44;
+            Respuesta.Opcion = $('#txtGrupoRiesgo').val();
+
+
+            /*PREGUNTA 41: ¿En su entorno familiar alguien ha presentado algún síntoma descrito anteriormente?*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 41;
+            var opcionLabora = "";
+
+            if ($('#rbFamSintoDescritSi').prop('checked')) {
+                opcionLabora = "SI";
+                Respuesta.Opcion = 158;
+            }
+
+            if ($('#rbFamSintoDescritNo').prop('checked')) {
+                opcionLabora = "No";
+                Respuesta.Opcion = 159;
+            }
+
+            /*VALIDACION*/
+            if (Respuesta.Opcion != undefined) {
+                Preguntas.push(Respuesta);
+            } else {
+                    contadorNoResp += 1;
+                    htmlMensaje += '<li>Falta responder la pregunta de la Sección 5: "¿En su entorno familiar alguien ha presentado algún síntoma descrito anteriormente?".</li>'
+            }
+
+            /*PREGUNTA 15: Indicar que sintomatología está presentando el familiar*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 15;
+            Respuesta.Opcion = $('#txtFamiliar').val();
+
+            if (Respuesta.Opcion != "") {
+                Preguntas.push(Respuesta);
+            } else if (opcionLabora == "SI") {
+                contadorNoResp += 1;
+                htmlMensaje += '<li>Falta responder la pregunta de la Sección 7: "Indicar que sintomatología está presentando el familiar: ".</li>'
+            }
+
+            /*PREGUNTA 16: Vacaciones*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 16;
+            var opcionLabora = "";
+
+
+            ///*Pregunta 40: Fecha de Inicio y Fin de vacaciones:**/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 40;
+
+
+            /*PREGUNTA 35: Planificacion*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 35;
+
+
+            /*PREGUNTA 36: Por favor indicar el lugar de destino**/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 36;
+
+
+            ///*Indicar fechas de salida y retorno de viaje : */
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 37;
+
+            /*PREGUNTA 38: Tipo de transporte*/
+
+            Respuesta = {};
+            Respuesta.CodigoPregunta = 38;
+
+
+            /*GRABAR TODAS LAS RESPUESTAS*/
+            obEncuesta.ListarPreguntas = Preguntas;
+
+            if (contadorNoResp > 0) {
+                htmlMensaje = '<ul>'+htmlMensaje+'</ul><hr/>';
+                $('#divValidaciones').html(htmlMensaje);
+                return false;
+            }
+
+
+
+            /*VALIDACION DE FECHA DE INICIO Y FECHA DE FIN*/
+
+
+            var AceptoTerminos = $('#chkAcepto').prop('checked');
+
+            if (!AceptoTerminos) {
+                alert("Para continuar tiene que aceptar la declaración jurada.");
+                return false;
+            }
+
+            obEncuesta.ChckTerminos = AceptoTerminos;
+
+            var SinSintomas = $('#chkNoSintomas').prop('checked');
+
+            if (SinSintomas) {
+                alert("Ud Esta declarando no tener ningun sintoma.");
+                obEncuesta.SinSintomas = SinSintomas;
+            } else {
+                obEncuesta.SinSintomas = SinSintomas;
+            }
+
+            
+
+
+
+            /*mensaje final */
+
+            if ($('#Pregunta1_1').prop('checked') || $('#Pregunta2_1').prop('checked') || $('#Pregunta3_1').prop('checked')) {
+                obEncuesta.CodigoMensaje = 1;
+
+            } else if ($('#Pregunta5_1').prop('checked') || $('#Pregunta4_1').prop('checked') || $('#Pregunta6_1').prop('checked') || $('#Pregunta7_1').prop('checked') || $('#Pregunta8_1').prop('checked') || $('#Pregunta9_1').prop('checked') || $('#Pregunta10_1').prop('checked') || $('#Pregunta11_1').prop('checked')
+            || $('#Pregunta12_1').prop('checked') || $('#Pregunta13_1').prop('checked') || $('#Pregunta14_1').prop('checked') ) {
+                obEncuesta.CodigoMensaje = 2;
+
+            } else { //$('#Pregunta8_1').prop('checked') ||
+                obEncuesta.CodigoMensaje = 3;
+            }
+
+            $.ajax({
+                url: sessionStorage.URL + "/Formulario/GuardarRespuesta",
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                processData: true,
+                data: JSON.stringify(obEncuesta),
+                success: function (resp) {
+
+                    console.log(resp);
+
+                    if (resp.Result) {
+
+                        sessionStorage.setItem("NombreColaborador", NombresApellidos);
+                        sessionStorage.setItem("CodigoRegistro", resp.Data.CodigoRegistro);
+                        sessionStorage.setItem("Mensaje", resp.MensajeHtml);
+
+                         window.location.href = sessionStorage.URL + 'Gracias';
+
+                    } else {
+                        //Alerta si es que se han hecho algunos checks
+                        alert("No se pudo grabar el formulario.");
+                    }
+                }
+            });
+
+
+        }
+
+        //Limpiezas
+
+        function Limpieza8() {
+            $('#cboOficinaProvincia').val("");
+            $('#cboOficinaLima').val("");
+        }
+
+        function Limpieza11() {
+            $('#rbColaborador1').prop("checked", false);
+            $('#rbColaborador2').prop("checked", false);
+            $('#rbColaborador3').prop("checked", false);
+            $('#rbColaborador4').prop("checked", false);
+            $('#rbColaborador5').prop("checked", false);
+            $('#rbColaborador6').prop("checked", false);
+            $('#txtOtrosC').val("");
+
+            $('#rbProveedor1').prop("checked", false);
+            $('#rbProveedor2').prop("checked", false);
+            $('#rbProveedor3').prop("checked", false);
+            $('#rbProveedor4').prop("checked", false);
+            $('#rbProveedor5').prop("checked", false);
+            $('#rbProveedor6').prop("checked", false);
+            $('#txtOtrosP').val("");
+
+            $("#txtOtrosC").hide();
+            $("#txtOtrosP").hide();
+        }
+
+        function Limpieza33() {
+            $('#txtOtrosP').val("");
+        }
+
+        function Limpieza34(codigo) {
+            $('#txtOtrosC').val("");
+            if (codigo == 6) {
+                $("#txtOtrosC").show();
+            } else {
+                $("#txtOtrosC").hide();
+            }
+        }
+
+
+        function Limpieza14() {
+            $('#txtFamiliar').val("");
+        }
+
+
+        function LimpiezaPrincipal() {
+            $('#rbColaborador1').val("");
+        }
+
+        function LimpiezaDeclaracion(){
+            $('#Pregunta1_1').prop("checked", false);
+            $('#Pregunta1_2').prop("checked", true);
+            $('#Pregunta2_1').prop("checked", false);
+            $('#Pregunta2_2').prop("checked", true);
+            $('#Pregunta3_1').prop("checked", false);
+            $('#Pregunta3_2').prop("checked", true);
+            $('#Pregunta4_1').prop("checked", false);
+            $('#Pregunta4_2').prop("checked", true);
+            $('#Pregunta5_1').prop("checked", false);
+            $('#Pregunta5_2').prop("checked", true);
+            $('#Pregunta6_1').prop("checked", false);
+            $('#Pregunta6_2').prop("checked", true);
+            $('#Pregunta7_1').prop("checked", false);
+            $('#Pregunta7_2').prop("checked", true);
+            $('#Pregunta8_1').prop("checked", false);
+            $('#Pregunta8_2').prop("checked", true);
+            $('#Pregunta9_1').prop("checked", false);
+            $('#Pregunta9_2').prop("checked", true);
+            $('#Pregunta10_1').prop("checked", false);
+            $('#Pregunta10_2').prop("checked", true);
+            $('#Pregunta11_1').prop("checked", false);
+            $('#Pregunta11_2').prop("checked", true);
+            $('#Pregunta12_1').prop("checked", false);
+            $('#Pregunta12_2').prop("checked", true);
+            $('#Pregunta13_1').prop("checked", false);
+            $('#Pregunta13_2').prop("checked", true);
+            $('#Pregunta14_1').prop("checked", false);
+            $('#Pregunta14_2').prop("checked", true);
+            
+        }
+
+        function BloquearDeclaracionSintomas() {
+            $('#Pregunta1_1').prop("disabled", true);
+
+            $('#Pregunta2_1').prop("disabled", true);
+            
+            $('#Pregunta3_1').prop("disabled", true);
+           
+            $('#Pregunta4_1').prop("disabled", true);
+      
+            $('#Pregunta5_1').prop("disabled", true);
+     
+            $('#Pregunta6_1').prop("disabled", true);
+        
+            $('#Pregunta7_1').prop("disabled", true);
+       
+            $('#Pregunta8_1').prop("disabled", true);
+      
+            $('#Pregunta9_1').prop("disabled", true);
+   
+            $('#Pregunta10_1').prop("disabled", true);
+         
+            $('#Pregunta11_1').prop("disabled", true);
+     
+            $('#Pregunta12_1').prop("disabled", true);
+        
+            $('#Pregunta13_1').prop("disabled", true);
+     
+            $('#Pregunta14_1').prop("disabled", true);
+
+
+        }
+
+        function DesbloquearDeclaracionSintomas() {
+
+            $('#Pregunta1_1').prop("disabled", false);
+
+            $('#Pregunta2_1').prop("disabled", false);
+
+            $('#Pregunta3_1').prop("disabled", false);
+
+            $('#Pregunta4_1').prop("disabled", false);
+
+            $('#Pregunta5_1').prop("disabled", false);
+
+            $('#Pregunta6_1').prop("disabled", false);
+
+            $('#Pregunta7_1').prop("disabled", false);
+
+            $('#Pregunta8_1').prop("disabled", false);
+
+            $('#Pregunta9_1').prop("disabled", false);
+
+            $('#Pregunta10_1').prop("disabled", false);
+
+            $('#Pregunta11_1').prop("disabled", false);
+
+            $('#Pregunta12_1').prop("disabled", false);
+
+            $('#Pregunta13_1').prop("disabled", false);
+
+            $('#Pregunta14_1').prop("disabled", false);
+
+
+        }
+
+        
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
